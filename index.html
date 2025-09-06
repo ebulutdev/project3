@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Arama Motoru</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fab fa-youtube"></i>
+                <h1>YouTube Arama</h1>
+            </div>
+            <p class="subtitle">Video adına göre arama yapın</p>
+        </header>
+
+        <main class="main">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Video adını yazın..." autocomplete="off">
+                    <button id="searchBtn" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="search-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="includeDescription" checked>
+                        <span class="checkmark"></span>
+                        Açıklamada da ara
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="sortByRelevance" checked>
+                        <span class="checkmark"></span>
+                        İlgiye göre sırala
+                    </label>
+                </div>
+            </div>
+
+            <div class="results-container" id="resultsContainer">
+                <div class="initial-state">
+                    <i class="fas fa-search"></i>
+                    <h3>Arama yapmaya başlayın</h3>
+                    <p>Video adını yazıp arama yapın</p>
+                </div>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Aranıyor...</p>
+            </div>
+
+            <div class="pagination" id="pagination" style="display: none;">
+                <button id="prevBtn" class="page-btn">
+                    <i class="fas fa-chevron-left"></i> Önceki
+                </button>
+                <span id="pageInfo">Sayfa 1</span>
+                <button id="nextBtn" class="page-btn">
+                    Sonraki <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 YouTube Arama Motoru. Eğitim amaçlı yapılmıştır.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
